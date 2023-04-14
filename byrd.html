@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+<head>
+	
+<meta charset="UTF-8">
+	
+<title>byrd theater</title>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap" rel="stylesheet">
+	
+	
+<style type="text/css">
+a:link {
+    text-decoration: none;
+    color: #000000;
+}
+a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+a:hover {
+    text-decoration: none;
+    color: #000000;
+}
+a:active {
+    text-decoration: none;
+    color: #000000;
+}
+</style>
+<link href="byrd.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="background: #DDDDDD">
+	
+<div class="container">
+	 
+ <div class="div_sidebar">
+	  
+	<div id="Div_1"> 
+		  
+	  <a href="Rollinthunder.html"><img src="rollinthunder.jpg" alt="" id= "icon_1"/></a>
+	  
+    </div>
+	  
+	<div id="Div_2">
+		
+		<img src="Byrdtheater_small.jpg" alt="" id="icon_2"/>
+	  
+	</div>
+	  
+    <div id="Div_3">
+		
+    <img src="CVSsticker_small.jpg" id="icon_3" alt=""/>
+	  
+	</div>
+	  
+	<div id="Div_4">
+		
+	<img src="altard_small.jpg" id="icon_4" alt=""/>
+	
+	</div>
+	  
+	<div id="Div_5"> 
+		  
+	  <img src="scribble_small.jpg" alt="" id="icon_5"/>
+	  
+    </div>
+	  
+	<div id="Div_6">
+		
+		<img src="truelove_small.jpg" alt="" id="icon_6"/>
+	  
+	</div>
+	  
+    <div id="Div_7">
+		
+    <img src="bombshell_small.jpg" id="icon_7" alt=""/>
+	  
+	</div>
+	  
+	<div id="Div_8">
+		
+	<img src="elfuke_small.jpg" id="icon_8" alt=""/>
+	
+	</div>
+	 
+	<div id="Div_9"> 
+		  
+	  <img src="vintage_small.jpg" alt="" id="icon_9"/>
+	  
+    </div>
+	  
+	<div id="Div_10">
+		
+		<img src="plan9_small.jpg" alt="" id="icon_10"/>
+	  
+	</div>
+	  
+    <div id="Div_11">
+		
+    <img src="open_small.jpg" id="icon_11" alt=""/>
+	  
+	  </div>
+	  
+ <div id="div_bottom">
+
+	 <div id="Div_12">
+		
+	<img src="parking_small.jpg" id="icon_12" alt=""/>
+	
+	</div>
+	 
+	 <div id="Div_13">
+		 
+	 <img src="shortpump_small.jpg" id="icon_13" alt=""/>
+		 
+	 </div>
+	
+	 <div id="Div_14">
+		 
+	 <img src="bookcart_small.jpg" id="icon_14" alt=""/>
+		 
+	 </div>
+	 
+	 <div id="Div_15">
+		 
+	 <img src="botany_small.jpg" id="icon_15" alt=""/>
+		 
+	 </div>
+	 
+	 <div id="Div_16">
+		 
+	 <img src="Lineage_small.jpg" id="icon_16" alt=""/>
+		 
+	 </div>
+	 
+	 <div id="Div_17">
+		 
+	 <img src="stopsign_small.jpg" id="icon_17" alt=""/>
+		 
+	 </div>
+	 
+	 <div id="Div_18">
+		 
+	 <img src="westelm_small.jpg" id="icon_18" alt=""/>
+		 
+	 </div>
+	 
+	 <div id="Div_20">
+		 
+	 <img src="carycourt_small.jpg" id="icon_20" alt=""/>
+		 
+	 </div>
+	 
+	  <div id="Div_21">
+		 
+	 <img src="vmfa_small.jpg" id="icon_21" alt=""/>
+		 
+	 </div>
+	 
+</div>
+	  
+  	</div>
+	
+	
+<div id="space_1">&nbsp;</div>
+	
+<div id="Div_menu">
+	
+<div id="title"><p><a href="index.html">look around</a></p></div>
+    <div id="about"><p><a href="about.html">about</a></p></div>
+	 <p>(click and drag)</p>
+	
+	</div>
+	
+<div id="main_gallery" >
+	  
+	<div id="div_image">
+		
+			<img src="Byrdtheater.jpg" alt="rollinng thunder car audio" ID="img_byrd" class="img"/>
+		
+		<div id="caption"> <p>Richmond, VA <br>
+			
+2023</p></div>
+	  
+	</div>
+	
+</div>
+	
+</div>
+	
+<script>
+	
+	// Make the DIV element draggable:
+dragElement(document.getElementById("div_image"));
+		
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}</script>
+</body>
+</html>
